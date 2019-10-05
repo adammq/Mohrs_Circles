@@ -21,7 +21,7 @@ Cauchy = np.matrix([[sigX,tauXY,tauXZ],[tauXY,sigY,tauYZ],[tauXZ,tauYZ,sigZ]])
 
 sig_prncpl = linalg.eigvals(Cauchy)
 sig_prncpl = sorted(sig_prncpl,reverse=True)
-tau_abs = (sig_prncpl[0]-sig_prncpl[2])/2
+tau_abs = abs(sig_prncpl[0]-sig_prncpl[2])/2
 
 #print value outputs
 print("\nPrincipal normal stresses:\n" +
