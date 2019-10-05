@@ -17,7 +17,7 @@ tauXZ = float(input("tau-xz: "))
 tauYZ = float(input("tau-yz: "))
 
 #calculate principal normal stresses and absolute maximum shear stress
-Cauchy = np.matrix([[sigX,tauXY,tauXZ],[tauXY,sigY,tauYZ],[tauXZ,tauYZ,sigZ]]);
+Cauchy = np.matrix([[sigX,tauXY,tauXZ],[tauXY,sigY,tauYZ],[tauXZ,tauYZ,sigZ]])
 
 sig_prncpl = linalg.eigvals(Cauchy)
 sig_prncpl = sorted(sig_prncpl,reverse=True)
